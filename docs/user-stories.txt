@@ -1,0 +1,67 @@
+Utente finale: io 
+
+Obiettivi principali dell’applicazione: 
+
+1. Voglio tenere traccia delle mie spese e delle mie entrate 
+
+2. Voglio organizzare le mie spese in categorie 
+
+3. Voglio sapere quali sono le categorie in cui spendo di più 
+
+4. Voglio poter fissare dei budget massimi di spesa su determinate categorie 
+
+5. Voglio avere una vista grafica semplice e intuitiva 
+
+User stories 
+
+1. Voglio tenere traccia delle mie spese e delle mie entrate 
+
+    - Come utente voglio poter inserire una spesa in pochi secondi 
+
+    - Come utente voglio che spese ed entrate ricorrenti vengano segnate in automatico 
+
+    - Come utente voglio che l’inserimento di una spesa/entrata sia effettuabile da un’unica schermata 
+
+    - Come utente voglio la possibilità di allegare la foto di uno scontrino (opzionale) 
+
+    - Come utente voglio che le spese/entrate siano divise sulla base di contanti o carta oltre ad avere un totale di entrambi 
+
+    - Come utente voglio che una voce includa la tipologia (spesa/entrata), se ho pagato in contanti o carta, categoria di spesa, data, importo, descrizione (opzionale) foto scontrino (opzionale) 
+
+    - Come utente voglio che le transazioni possano essere sempre modificate o eliminate 
+
+2. Voglio organizzare le mie spese in categorie 
+
+    - Come utente voglio poter scegliere tra categorie predefinite nel momento di inserimento di una spesa/entrata 
+
+    - Come utente voglio poter inserire nuove categorie all’occorrenza 
+
+3. Voglio sapere quali sono le categorie in cui spendo di più 
+
+    - Come utente voglio poter vedere le spese ed entrate totali in un mese 
+
+    - Come utente voglio poter vedere le spese ed entrate totali in un periodo selezionato 
+
+    - Come utente voglio poter vedere le spese ed entrate totali divise tra contanti e carta 
+
+    - Come utente voglio poter consultare un report mensile con le spese e entrate totali divise per categorie 
+
+    - Come utente voglio sapere in quale percentuale una categoria pesa sulle spese totali 
+
+    - Come utente voglio ricevere suggerimenti sulle mie abitudini di spesa  
+
+    - Come utente voglio capire dove potrei risparmiare 
+
+4. Voglio poter fissare dei budget massimi di spesa su determinate categorie 
+
+    - Come utente voglio poter fissare un limite massimo di spese in alcune categorie, che ritengo di seconda importanza 
+
+    - Come utente voglio vedere quanto budget ho ancora disponibile 
+
+    - Come utente voglio ricevere una notifica ogni qual volta il budget massimo si avvicina 
+
+5. Voglio avere una vista grafica semplice e intuitiva 
+
+    - Come utente voglio che i grafici relativi alle spese siano semplici e intuitivi ad un primo sguardo 
+
+    - Come utente voglio che l’esperienza utente sia semplice e di facile utilizzo 
