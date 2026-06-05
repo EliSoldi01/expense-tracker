@@ -3,7 +3,7 @@ import os
 
 # Prendi 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_PATH = os.path.join(BASE_DIR, "db", "expense-tracker.db")
+DB_PATH = os.path.join(BASE_DIR, "expense-tracker", "database", "expense-tracker.db")
 
 # check if database file exists
 if not os.path.exists(DB_PATH):
