@@ -9,7 +9,7 @@ import src.repositories.category_repository as c_repo
 # =========================
 def get_transactions_service(conn, type=None, date=None, category=None, start_date=None, end_date=None):
 
-    return t_repo.get_transactions(
+    rows = t_repo.get_transactions(
         conn,
         type,
         date,
@@ -17,6 +17,20 @@ def get_transactions_service(conn, type=None, date=None, category=None, start_da
         start_date,
         end_date
     )
+    
+    result = []
+    for row in rows:
+        result.append({
+            "id": row[0],
+            "type": row[1],
+            "amount": row[2],
+            "date": row[3],
+            "category": row[4],
+            "description": row[5],
+        })
+
+    return result
+
 
 
 # =========================

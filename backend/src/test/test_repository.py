@@ -1,6 +1,6 @@
-import src.repositories.category_repository as c_repo
-import src.repositories.transaction_repository as t_repo
-import src.repositories.report_repository as r_repo
+import backend.src.repositories.category_repository as c_repo
+import backend.src.repositories.transaction_repository as t_repo
+import backend.src.repositories.report_repository as r_repo
 import sqlite3
 
 import os

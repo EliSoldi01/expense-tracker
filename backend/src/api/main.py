@@ -10,6 +10,18 @@ from database.create_database import DB_PATH
 
 app = FastAPI()
 
+### CORS Configuration: connect frontend and backend during development
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+### Database connection dependency
 def get_database_connection():
     conn = sqlite3.connect(DB_PATH)
 
@@ -140,3 +152,5 @@ def top_expenses(limit: int, conn = Depends(get_database_connection)):
 
     conn.close()
     return data
+
+
