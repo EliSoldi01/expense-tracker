@@ -1,0 +1,1 @@
+[] Rendere category nel form per aggiugere transazione un selec da backend

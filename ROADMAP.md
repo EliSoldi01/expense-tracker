@@ -2,8 +2,8 @@
 
 ## v0.1.0 MVP
 
-- [ ] Database SQLite
-- [ ] Transaction model
+- [X] Database SQLite
+- [X] Transaction model
 - [ ] Add transaction
 - [ ] Edit transaction
 - [ ] Delete transaction

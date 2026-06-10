@@ -1,0 +1,50 @@
+.balance-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card.main {
+  background: #f7f7ff;
+  min-width: 300px;
+}
+
+.amount {
+  font-size: 30px;
+}
+
+.expense-card {
+  background: #ffc3c2;
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.income-card {
+  background: #8fd87f;
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.income {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.expense {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}

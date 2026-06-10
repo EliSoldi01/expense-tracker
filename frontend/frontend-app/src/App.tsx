@@ -1,12 +1,24 @@
-import TransactionsTable from "./components/TransactionsTable";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Transactions from "./pages/Transactions";
+import AddTransaction from "./pages/AddTransaction";
+import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.css"
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Expense Tracker</h1>
-      <TransactionsTable />
+    <div style={{ marginLeft: "50px" }}>
+      <div className="app-layout">
+      <Sidebar />
+
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/transactions/new" element={<AddTransaction />} />
+        </Routes>
+      </main>
     </div>
+  </div>
   );
 }
-
-export default App;

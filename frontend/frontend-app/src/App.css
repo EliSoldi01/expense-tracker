@@ -1,0 +1,9 @@
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 220px; /* stessa larghezza sidebar */
+  padding: 20px;
+  width: 100%;
+}

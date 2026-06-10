@@ -73,6 +73,24 @@ def get_transaction_by_id(conn, transaction_id):
 
     return cursor.fetchone()
 
+def get_last_transactions(conn, limit=10):
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            t.id,
+            t.type,
+            t.date,
+            t.amount,
+            c.name AS category,
+            t.description
+        FROM transactions t
+        LEFT JOIN categories c ON t.category_id = c.id
+        ORDER BY t.date DESC, t.id DESC
+        LIMIT ?
+    """, (limit,))
+
+    return cursor.fetchall()
 
 def update_transaction(conn, transaction_id, type, date, amount, category_id, description):
     cursor = conn.cursor()

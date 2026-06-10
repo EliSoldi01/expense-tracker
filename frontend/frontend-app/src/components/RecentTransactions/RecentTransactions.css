@@ -1,0 +1,93 @@
+.rt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all {
+  background: transparent;
+  border: none;
+  color: gray;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* CARD */
+.transaction-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 480 ;
+
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.transaction-card:hover {
+  background: #f7f7f7;
+}
+
+/* LEFT */
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.type {
+  font-size: 12px;
+  color: gray;
+}
+
+/* RIGHT */
+.transaction-right {
+  text-align: right;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.amount.income {
+  color: black;
+}
+
+.amount.expense {
+  color: black;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}

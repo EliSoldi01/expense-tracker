@@ -23,8 +23,8 @@ def get_transactions_service(conn, type=None, date=None, category=None, start_da
         result.append({
             "id": row[0],
             "type": row[1],
-            "amount": row[2],
-            "date": row[3],
+            "date": row[2],
+            "amount": row[3],
             "category": row[4],
             "description": row[5],
         })
@@ -44,6 +44,26 @@ def get_transaction_by_id_service(conn, transaction_id):
         raise HTTPException(404, "Transaction not found")
 
     return transaction
+
+# =========================
+# GET LAST N TRANSACTIONS
+# =========================
+def get_last_transactions_service(conn, limit):
+
+    rows = t_repo.get_last_transactions(conn, limit)
+
+    result = []
+    for row in rows:
+        result.append({
+            "id": row[0],
+            "type": row[1],
+            "date": row[2],
+            "amount": row[3],
+            "category": row[4],
+            "description": row[5],
+        })
+
+    return result
 
 
 # =========================

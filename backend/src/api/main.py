@@ -75,6 +75,16 @@ def get_transaction_by_id(id: int, conn = Depends(get_database_connection)):
     conn.close()
     return data
 
+# =========================
+# LAST N TRANSACTIONS
+# =========================
+@app.get("/transactions/last/{limit}")
+def last_transactions(limit: int, conn = Depends(get_database_connection)):
+
+    data = t_service.get_last_transactions_service(conn, limit)
+
+    return data
+
 
 # =========================
 # CREATE
@@ -82,10 +92,8 @@ def get_transaction_by_id(id: int, conn = Depends(get_database_connection)):
 @app.post("/transactions")
 def create_transaction(transaction: schema.TransactionCreate, conn = Depends(get_database_connection)):
 
-
     result = t_service.create_transaction_service(conn, transaction)
 
-    conn.close()
     return result
 
 
@@ -97,7 +105,6 @@ def update_transaction(id: int, t: schema.TransactionUpdate, conn = Depends(get_
 
     result = t_service.update_transaction_service(conn, id, t)
 
-    conn.close()
     return result
 
 
@@ -109,7 +116,6 @@ def delete_transaction(id: int, conn = Depends(get_database_connection)):
 
     t_service.delete_transaction_service(conn, id)
 
-    conn.close()
     return Response(status_code=204)
 
 
@@ -121,7 +127,6 @@ def by_category(conn = Depends(get_database_connection)):
 
     data = r_service.get_expenses_by_category_service(conn)
 
-    conn.close()
     return data
 
 
@@ -130,7 +135,6 @@ def balance(conn = Depends(get_database_connection)):
 
     data = r_service.get_balance_service(conn)
 
-    conn.close()
     return data
 
 
@@ -150,7 +154,6 @@ def top_expenses(limit: int, conn = Depends(get_database_connection)):
 
     data = r_service.get_top_expenses_service(conn, limit)
 
-    conn.close()
     return data
 
 
