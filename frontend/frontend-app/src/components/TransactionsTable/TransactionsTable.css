@@ -1,23 +1,59 @@
-
-.table-container {
+.transactions-page {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 900px;
-  margin: 20px auto;
-  overflow-x: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  background: white;
+  margin: 0 auto;
+
+  padding: 15px;   /* 🔥 UNICO padding globale */
+}
+
+.header,
+.table-container {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;  /* 🔥 allinea a sinistra */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filters_button {
+  display: flex;          /* 🔥 fondamentale */
+  align-items: center;    /* centra verticale */
+  gap: 6px;               /* spazio tra icona e testo */
+
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filters_button:hover {
+  background-color: black;
+  color: white;
+}
+
+.filters_button.active {
+  background: black;
+  color: white;
+  border: 1px solid black;
 }
 
 table {
+  background: white;
   width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
   table-layout: fixed;
   border-spacing: 0;
   border-collapse: collapse;
   border: 1px solid #D7D7D8;
   font-family: system-ui, -apple-system, sans-serif;
-  background-color: transparent;
-  border-radius: 12px;
   overflow: hidden;
 }
 

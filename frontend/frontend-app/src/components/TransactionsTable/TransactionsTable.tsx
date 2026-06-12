@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import { api } from "../../api/client.ts";
 import type { Transaction } from "../../types/transaction.ts";
+import { IoFilterOutline } from "react-icons/io5";
+import FiltersPopup from "../FiltersPopup/FiltersPopup.tsx";
 
 export default function TransactionsTable() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
+  const [filters, setFilters] = useState({
+  type: "",
+  category: ""
+});
 
   useEffect(() => {
     setLoading(true);
@@ -31,8 +38,28 @@ export default function TransactionsTable() {
   }
 
   return (
-    
+      
+      <div className="transactions-page">
+
+      <div className="header">
+        
+        <button onClick={() => setShowFilters(!showFilters)} className={`filters_button ${showFilters ? "active" : ""}`}>
+          <IoFilterOutline />
+          Filters
+        </button>
+        </div>
+          {showFilters && (
+          <div>
+            <FiltersPopup
+            filters={filters}
+            setFilters={setFilters}
+          />
+          </div>
+        )}
+        
+
       <div className="table-container">
+
         <table>
           <thead>
             <tr>
@@ -66,6 +93,7 @@ export default function TransactionsTable() {
             ))}
           </tbody>
         </table>
+      </div>
       </div>
   );
 }

@@ -21,8 +21,8 @@ def get_transactions(conn, type=None, date=None, category=None, start_date=None,
             t.type,
             t.date,
             t.amount,
-            t.description,
-            c.name AS category
+            c.name AS category,
+            t.description
         FROM transactions t
         LEFT JOIN categories c ON t.category_id = c.id
         WHERE 1=1
@@ -64,8 +64,8 @@ def get_transaction_by_id(conn, transaction_id):
             t.type,
             t.date,
             t.amount,
-            t.description,
-            c.name AS category
+            c.name AS category,
+            t.description
         FROM transactions t
         LEFT JOIN categories c ON t.category_id = c.id
         WHERE t.id = ?
