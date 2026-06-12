@@ -42,22 +42,22 @@ export default function TransactionsTable() {
       <div className="transactions-page">
 
       <div className="header">
-        
-        <button onClick={() => setShowFilters(!showFilters)} className={`filters_button ${showFilters ? "active" : ""}`}>
+        <button
+          onClick={() => setShowFilters(!showFilters)}
+          className={`filters_button ${showFilters ? "active" : ""}`}
+        >
           <IoFilterOutline />
           Filters
         </button>
-        </div>
-          {showFilters && (
-          <div>
-            <FiltersPopup
+
+        {showFilters && (
+          <FiltersPopup
             filters={filters}
             setFilters={setFilters}
           />
-          </div>
         )}
-        
-
+      </div>
+      
       <div className="table-container">
 
         <table>

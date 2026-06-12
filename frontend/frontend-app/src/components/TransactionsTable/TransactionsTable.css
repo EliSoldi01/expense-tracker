@@ -18,6 +18,7 @@
   justify-content: flex-start;  /* 🔥 allinea a sinistra */
   align-items: center;
   margin-bottom: 10px;
+  gap: 12px;
 }
 
 .filters_button {
@@ -30,6 +31,7 @@
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
+  height: 38px;
 }
 
 .filters_button:hover {
@@ -40,7 +42,6 @@
 .filters_button.active {
   background: black;
   color: white;
-  border: 1px solid black;
 }
 
 table {

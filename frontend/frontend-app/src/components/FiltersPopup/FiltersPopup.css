@@ -1,24 +1,36 @@
-.popup-container {
-  position: absolute;
-
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 15px;
-
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  z-index: 1000;
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .select {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px
+  min-width: 180px;
 }
 
-.search-field {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.clear-button {
+  height: 38px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
+.clear-button:hover {
+  background-color: rgb(254, 100, 100);
+  cursor: pointer;
+}
+
+.apply-button {
+  height: 38px;
+  background-color: transparent;
+  color: black;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.apply-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
