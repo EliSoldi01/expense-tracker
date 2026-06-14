@@ -20,17 +20,3 @@
   background-color: rgb(254, 100, 100);
   cursor: pointer;
 }
-
-.apply-button {
-  height: 38px;
-  background-color: transparent;
-  color: black;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-}
-
-.apply-button:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}

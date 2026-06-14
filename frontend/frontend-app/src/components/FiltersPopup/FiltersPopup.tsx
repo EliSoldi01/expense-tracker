@@ -17,24 +17,24 @@ const types = [
 ];
 
 const categories = [
-  { value: "rent", label: "Rent", type: "expense" },
-  { value: "utilities", label: "Utilities", type: "expense" },
-  { value: "groceries", label: "Groceries", type: "expense" },
-  { value: "healthcare", label: "Healthcare", type: "expense" },
-  { value: "transportation", label: "Transportation", type: "expense" },
-  { value: "travel", label: "Travel/Experience", type: "expense" },
-  { value: "entertainment", label: "Entertainment", type: "expense" },
-  { value: "food", label: "Food", type: "expense" },
-  { value: "subscription", label: "Subscription", type: "expense" },
-  { value: "gifts", label: "Gifts", type: "expense" },
-  { value: "shopping_exp", label: "Shopping", type: "expense" },
-  { value: "other_expense", label: "Other expense", type: "expense" },
+  { value: "Rent", label: "Rent", type: "expense" },
+  { value: "Utilities", label: "Utilities", type: "expense" },
+  { value: "Groceries", label: "Groceries", type: "expense" },
+  { value: "Healthcare", label: "Healthcare", type: "expense" },
+  { value: "Transportation", label: "Transportation", type: "expense" },
+  { value: "Travel", label: "Travel/Experience", type: "expense" },
+  { value: "Entertainment", label: "Entertainment", type: "expense" },
+  { value: "Food", label: "Food", type: "expense" },
+  { value: "Subscription", label: "Subscription", type: "expense" },
+  { value: "Gifts", label: "Gifts", type: "expense" },
+  { value: "Shopping_exp", label: "Shopping", type: "expense" },
+  { value: "Other_expense", label: "Other expense", type: "expense" },
 
-  { value: "salary", label: "Salary", type: "income" },
-  { value: "pocket_money", label: "Pocket money", type: "income" },
-  { value: "gift_income", label: "Gift", type: "income" },
-  { value: "other_income", label: "Other income", type: "income" },
-  { value: "shopping_inc", label: "Shopping", type: "income" }
+  { value: "Salary", label: "Salary", type: "income" },
+  { value: "Pocket_money", label: "Pocket money", type: "income" },
+  { value: "Gift_income", label: "Gift", type: "income" },
+  { value: "Other_income", label: "Other income", type: "income" },
+  { value: "Shopping_inc", label: "Shopping", type: "income" }
 ];
 
 export default function FiltersPopup({ filters, setFilters }: Props) {
@@ -86,11 +86,6 @@ export default function FiltersPopup({ filters, setFilters }: Props) {
           })
         }>
         Clear All
-      </button>
-
-      <button
-        className="apply-button">
-        Apply
       </button>
 
     </div>

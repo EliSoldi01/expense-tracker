@@ -11,15 +11,19 @@ export default function TransactionsTable() {
   const [error, setError] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
-  type: "",
-  category: ""
-});
+    type: "",
+    category: ""
+  });
 
   useEffect(() => {
     setLoading(true);
     setError(null);
 
-    api.get("/transactions")
+    api.get("/transactions", { 
+      params: {
+        type: filters.type || undefined,
+        category: filters.category || undefined
+      }})
     .then(res => {setTransactions(res.data)})
     .catch((err) => {
       console.log(err);
@@ -29,7 +33,7 @@ export default function TransactionsTable() {
       setLoading(false);
     });
 
-  }, []);
+  }, [filters]);
 
   if (loading) return <p>Loading...</p>;
 
